@@ -8,6 +8,6 @@ services:
         environment:
          - TZ=Europe/Brussels
         volumes:
-            - ../output:/mnt/output
+            - ../../output:/mnt/output
 
         restart: unless-stopped

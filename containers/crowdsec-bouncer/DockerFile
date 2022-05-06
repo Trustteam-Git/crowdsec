@@ -1,0 +1,11 @@
+FROM ubuntu:20.04
+
+RUN apt-get update && apt-get upgrade -y
+RUN apt-get -y install curl jq+
+RUN curl -s https://packagecloud.io/install/repositories/crowdsec/crowdsec/script.deb.sh | bash
+
+RUN apt install -y crowdsec-firewall-bouncer-iptables
+
+RUN groupadd -g 1001 grp-webdev
+
+RUN usermod -aG grp-webdev root

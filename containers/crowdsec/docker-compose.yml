@@ -1,0 +1,15 @@
+version: "3.7"
+
+services:
+    crowdsec:
+        container_name: crowdsec
+        ports:
+            - 8082:8080
+            - 6060:6060
+        image: crowdsecurity/crowdsec:latest-debian
+        environment:
+            - TZ=Europe/Brussels        
+        volumes:
+            - ./crowdsec_config:/etc/crowdsec          
+            - ./crowdsec_data:/var/lib/crowdsec/data
+        restart: unless-stopped

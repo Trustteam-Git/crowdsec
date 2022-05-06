@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+    crowdsec-bouncer:
+        tty: true
+        container_name: crowdsec-bouncer
+        image: crowdsec-bouncer:latest
+        environment:
+         - TZ=Europe/Brussels
+        volumes:
+            - ../output:/mnt/output
+
+        restart: unless-stopped

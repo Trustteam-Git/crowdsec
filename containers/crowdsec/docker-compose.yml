@@ -13,3 +13,15 @@ services:
             - ./crowdsec_config:/etc/crowdsec          
             - ./crowdsec_data:/var/lib/crowdsec/data
         restart: unless-stopped
+
+    crowdsec-bouncer:
+        tty: true
+        container_name: crowdsec-bouncer
+        image: crowdsec-bouncer:latest
+        environment:
+         - TZ=Europe/Brussels
+        volumes:
+            - ../../output:/mnt/output
+            - ./scripts:/scripts
+        restart: unless-stopped
+

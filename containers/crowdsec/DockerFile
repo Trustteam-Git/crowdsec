@@ -1,11 +1,17 @@
 FROM ubuntu:20.04
 
 RUN apt-get update && apt-get upgrade -y
-RUN apt-get -y install curl jq+
+RUN apt-get -y install curl jq cron
 RUN curl -s https://packagecloud.io/install/repositories/crowdsec/crowdsec/script.deb.sh | bash
 
 RUN apt install -y crowdsec-firewall-bouncer-iptables
 
+ADD /scripts/export.sh /root/export.sh
+RUN chmod 0644 /root/export.sh
+RUN crontab -l | { cat; echo "* * * * * bash /root/export.sh"; } | crontab -
+
 RUN groupadd -g 1001 grp-webdev
 
 RUN usermod -aG grp-webdev root
+
+CMD ["cron","-f"]

@@ -18,8 +18,8 @@ jobs:
           GH_PAT: ${{ secrets.GH_PAT }}
       - name: github - publish - list
         run: |
-          git config user.name "${{ secrets.GIT_USER }}"
-          git config user.email "${{ secrets.GIT_EMAIL }}"
+          git config user.name ${{ secrets.GIT_USER }}
+          git config user.email ${{ secrets.GIT_EMAIL }}
           git add .
           git status
           git commit -m "Updated list"

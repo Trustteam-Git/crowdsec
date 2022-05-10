@@ -18,7 +18,7 @@ jobs:
       #     GH_PAT: ${{ secrets.GH_PAT }}
       - name: Github - publish - list
         run: |
-          cp  /output/list.txt fg-list.txt
+          cp  output/list.txt fg-list.txt
           git config user.name Smoetzak
           git config user.email ${{ secrets.GIT_EMAIL }}
           git add .

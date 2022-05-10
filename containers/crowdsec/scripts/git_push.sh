@@ -3,7 +3,7 @@ echo "git add"
 git add .
 echo "git status"
 git status  
-echo "git commit"       
+echo "git commit -a"       
 git commit -m "Updated list"
 echo "git push"
 git push 

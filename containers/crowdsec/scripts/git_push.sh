@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "git add"
-git add "."
+git add -A
 echo "git status"
 git status  
 echo "git commit -a"       

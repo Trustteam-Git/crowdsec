@@ -15,11 +15,13 @@ jobs:
         uses: BetaHuhn/repo-file-sync-action@v1
         with:
           GH_PAT: ${{ secrets.GH_PAT }}
-      - name: github - publish - list
+      - name: Github Prep
         run: |
           git config user.name Smoetzak
           git config user.email ${{ secrets.GIT_EMAIL }}
           git add .
-          git status
+          git status         
+      - name: Github Push
+        run: |
           git commit -m "Updated list"
-          git push          
+          git push            

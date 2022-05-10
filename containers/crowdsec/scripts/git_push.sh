@@ -8,4 +8,3 @@ git commit -m "Updated list"
 echo "git push"
 git push 
 echo "pause 5mins"
-sleep 5m

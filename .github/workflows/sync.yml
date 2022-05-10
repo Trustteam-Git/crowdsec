@@ -16,3 +16,9 @@ jobs:
         uses: BetaHuhn/repo-file-sync-action@v1
         with:
           GH_PAT: ${{ secrets.GH_PAT }}
+      - name: github - publish - list
+        run: |
+          git add .
+          git status
+          git commit -m "Updated list"
+          git push          

@@ -1,3 +1,4 @@
 containers/crowdsec/crowdsec_config
 containers/crowdsec/crowdsec_data
 todo.txt
+.gitignore

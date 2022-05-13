@@ -4,4 +4,4 @@ git add -A
 git status       
 git commit -m "Updated list"
 sleep 5
-git push 
+git push GitHub master

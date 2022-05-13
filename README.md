@@ -1,4 +1,4 @@
-# Crowdsec list for use on other devices
+# Crowdsec list to use on other devices
 ## Run it locally
 You can pull the repository to setup a crowdsec API and bouncer in docker.
 This will create a list of bad ip's in output/list.txt to use on other machines and updates this every minute.

@@ -1,0 +1,2 @@
+#!/bin/bash
+curl -s -H "X-Api-Key: 8f836261521dd543f160f04bab0ab285" http://crowdsec:8080/v1/decisions/stream?startup=true  | jq '.new[].value' | sed 's/"//g' > /mnt/output/list.txt

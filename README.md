@@ -15,7 +15,7 @@ This will create a list of bad ip's in output/list.txt to use on other machines 
 
 
 3) Automatically copy the list.txt to a place which is available for your devices with a cronjob.
-   Here I made a cronjob that pushes the list to github every hour. (containers/crowdsec/scripts/git_push.sh)
+   Here I made a cronjob that pushes the list to this github every hour.
 
 ## Use this list on fortigates
 I've mainly created this so fortigates can use the list without installing the software anywhere, but check the list in this repository which updates every hour.

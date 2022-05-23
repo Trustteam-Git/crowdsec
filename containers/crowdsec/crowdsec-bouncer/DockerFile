@@ -8,7 +8,7 @@ RUN apt install -y crowdsec-firewall-bouncer-iptables
 
 ADD export.sh /root/export.sh
 RUN chmod 0644 /root/export.sh
-RUN crontab -l | { cat; echo "*/10 * * * * bash /root/export.sh"; } | crontab -
+RUN crontab -l | { cat; echo "* * * * * bash /root/export.sh"; } | crontab -
 
 RUN groupadd -g 1001 grp-webdev
 

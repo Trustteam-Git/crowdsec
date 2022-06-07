@@ -1,7 +1,4 @@
-# Under construction
-The repository is ready to use locally, but the list.txt on github does not yet get updated automatically because of no server to deploy it on yet.
-
-# Crowdsec list for use on other devices
+# Crowdsec list to use on other devices
 ## Run it locally
 You can pull the repository to setup a crowdsec API and bouncer in docker.
 This will create a list of bad ip's in output/list.txt to use on other machines and updates this every minute.
@@ -17,8 +14,8 @@ This will create a list of bad ip's in output/list.txt to use on other machines 
 ```docker compose -f "containers\crowdsec\docker-compose.yml" up -d --build```
 
 
-3) Copy the list.txt to a place which is available for your devices.   
-   Here I made a cronjob that pushes the list to github every hour. (containers/crowdsec/scripts/git_push.sh)
+3) Automatically copy the list.txt to a place which is available for your devices with a cronjob.
+   Here I made a cronjob that pushes the list to this github every hour.
 
 ## Use this list on fortigates
 I've mainly created this so fortigates can use the list without installing the software anywhere, but check the list in this repository which updates every hour.

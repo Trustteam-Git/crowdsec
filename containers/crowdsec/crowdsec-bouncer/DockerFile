@@ -6,7 +6,7 @@ RUN curl -s https://packagecloud.io/install/repositories/crowdsec/crowdsec/scrip
 
 RUN apt install -y crowdsec-firewall-bouncer-iptables
 
-ADD /scripts/export.sh /root/export.sh
+ADD export.sh /root/export.sh
 RUN chmod 0644 /root/export.sh
 RUN crontab -l | { cat; echo "* * * * * bash /root/export.sh"; } | crontab -
 
